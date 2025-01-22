@@ -1,14 +1,4 @@
 #
-<div align="center">
-  <h2>💫 About Me: </h2>
-</div>
-<div align="left">
-😎 I am Dedicated and Passionate with my Career Path. <br>
-📖 Studying Bachelor of Science in Information Technology <br>
-💻 Major in Web and Mobile Development <br>
-🎮 Planning of Creating My Own Game <br>
-</div>
-<br>
 
 <img align="right" height="200" src="https://i.imgflip.com/65efzo.gif"  />
 
@@ -31,6 +21,15 @@
   <a href="https://www.linkedin.com/in/jericho-nomat-7a0a85187/" target="_blank">
     <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/linkedin/default.svg" width="52" height="40" alt="linkedin logo"  />
   </a>
+
+<br>
+<div align="left">
+😎 I am Dedicated and Passionate with my Career Path. <br>
+📖 Studying Bachelor of Science in Information Technology <br>
+💻 Major in Web and Mobile Development <br>
+🎮 Planning of Creating My Own Game <br>
+</div>
+  
 </div>
 
 ###
