@@ -1,14 +1,15 @@
 # 💫 About Me:
 
-😎 I am Dedicated and Passionate with my Career Path.
-📖 Studying Bachelor of Science in Information Technology
-💻 Major in Web and Mobile Development
-🎮 Planning of Creating My Own Game
+😎 I am Dedicated and Passionate with my Career Path. <br>
+📖 Studying Bachelor of Science in Information Technology <br>
+💻 Major in Web and Mobile Development <br>
+🎮 Planning of Creating My Own Game <br>
 
+<img align="right" height="150" src="https://i.imgflip.com/65efzo.gif"  />
 
 ## 🌐 Socials:
 [![Facebook](https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white)](https://facebook.com/J3richoMC) 
-<img align="right" height="150" src="https://i.imgflip.com/65efzo.gif"  />
+
 
 
 
