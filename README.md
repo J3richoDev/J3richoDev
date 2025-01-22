@@ -24,9 +24,9 @@
 ###
 
 <div align="center">
-😎 I am Dedicated and Passionate with my Career Path. <br>
+😎 Dedicated and Passionate About My Career Journey <br>
 💻 BSIT Major in Web and Mobile Development<br>
-🎮 Planning of Creating My Own Game <br>
+🎮 Aspiring Game Developer with Plans to Create My Own Game <br>
 </div>
 
 ###
