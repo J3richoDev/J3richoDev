@@ -1,5 +1,9 @@
 # 💫 About Me:
-I'm currently learning
+
+😎 I am Dedicated and Passionate with my Career Path.
+📖 Studying Bachelor of Science in Information Technology
+💻 Major in Web and Mobile Development
+🎮 Planning of Creating My Own Game
 
 
 ## 🌐 Socials:
