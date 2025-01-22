@@ -27,8 +27,7 @@
 
 <div align="center">
 😎 I am Dedicated and Passionate with my Career Path. <br>
-📖 Studying Bachelor of Science in Information Technology <br>
-💻 Major in Web and Mobile Development <br>
+💻 BSIT Major in Web and Mobile Development<br>
 🎮 Planning of Creating My Own Game <br>
 </div>
 
