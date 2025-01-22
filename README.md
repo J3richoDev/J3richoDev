@@ -1,4 +1,5 @@
-#<div aligh="center"> 💫 About Me: </div>
+#
+<div aligh="center"> <h1>💫 About Me: </h1></div>
 <div align="left">
 😎 I am Dedicated and Passionate with my Career Path. <br>
 📖 Studying Bachelor of Science in Information Technology <br>
