@@ -1,9 +1,10 @@
-# 💫 About Me:
-
+#<div aligh="center"> 💫 About Me: </div>
+<div align="left">
 😎 I am Dedicated and Passionate with my Career Path. <br>
 📖 Studying Bachelor of Science in Information Technology <br>
 💻 Major in Web and Mobile Development <br>
 🎮 Planning of Creating My Own Game <br>
+</div>
 
 <img align="right" height="150" src="https://i.imgflip.com/65efzo.gif"  />
 <br> <br>
