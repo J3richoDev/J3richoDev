@@ -6,8 +6,6 @@
 
 <h1 align="center">Hi👋 I'm Jericho</h1>
 
-###
-
 <div align="center">
   <a href="https://www.facebook.com/j3richomc" target="_blank">
     <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/facebook/default.svg" width="52" height="40" alt="facebook logo"  />
