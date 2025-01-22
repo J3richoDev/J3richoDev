@@ -1,20 +1,39 @@
 #
-<div aligh="center"> <h1>💫 About Me: </h1></div>
+<div align="center">
+  <h2>💫 About Me: </h2>
+</div>
 <div align="left">
 😎 I am Dedicated and Passionate with my Career Path. <br>
 📖 Studying Bachelor of Science in Information Technology <br>
 💻 Major in Web and Mobile Development <br>
 🎮 Planning of Creating My Own Game <br>
 </div>
-
-<img align="right" height="150" src="https://i.imgflip.com/65efzo.gif"  />
-<br> <br>
-
-## 🌐 Socials:
-[![Facebook](https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white)](https://facebook.com/J3richoMC) 
-
 <br>
-<br>
+
+<img align="right" height="200" src="https://i.imgflip.com/65efzo.gif"  />
+
+###
+
+<h3 align="center">🌐 Socials</h3>
+
+###
+
+<div align="center">
+  <a href="https://www.facebook.com/j3richomc" target="_blank">
+    <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/facebook/default.svg" width="52" height="40" alt="facebook logo"  />
+  </a>
+  <a href="mailto:nomat.dev@gmail.com" target="_blank">
+    <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/gmail/default.svg" width="52" height="40" alt="gmail logo"  />
+  </a>
+  <a href="https://www.youtube.com/@Arcadian_YT" target="_blank">
+    <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/youtube/default.svg" width="52" height="40" alt="youtube logo"  />
+  </a>
+  <a href="https://www.linkedin.com/in/jericho-nomat-7a0a85187/" target="_blank">
+    <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/linkedin/default.svg" width="52" height="40" alt="linkedin logo"  />
+  </a>
+</div>
+
+###
 
 #
 <div align="center">
