@@ -1,274 +1,665 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Projects - Jericho Nomat</title>
+
     <link rel="stylesheet" href="css/styles.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
 </head>
+
 <body>
+
     <!-- Navigation -->
+
     <nav class="navbar">
+
         <div class="nav-container">
+
             <div class="nav-logo">
+
                 <a href="index.html"><span>JN</span></a>
+
             </div>
+
             <div class="nav-menu">
+
                 <a href="index.html" class="nav-link">Home</a>
+
                 <a href="projects.html" class="nav-link active">Projects</a>
+
                 <a href="about.html" class="nav-link">About Me</a>
+
             </div>
+
             <div class="nav-actions">
+
                 <button class="theme-toggle" id="themeToggle" title="Toggle Theme">
+
                     <i class="fas fa-sun"></i>
+
                 </button>
+
                 <a href="contact.html" class="nav-contact-btn">Contact Me</a>
+
                 <div class="nav-toggle">
+
                     <span></span>
+
                     <span></span>
+
                     <span></span>
+
                 </div>
+
             </div>
+
         </div>
+
     </nav>
 
+
+
     <!-- Projects Header -->
+
     <section class="page-header">
+
         <div class="container">
+
             <h1 class="page-title">My Projects</h1>
+
             <p class="page-subtitle">Explore my development journey through these featured projects</p>
+
         </div>
+
     </section>
+
+
 
     <!-- Projects Grid -->
+
     <section class="projects-page">
+
         <div class="container">
+
             <div class="projects-grid-full">
+
                 <!-- PRHISMS Project -->
+
                 <div class="project-card-full">
+
                     <div class="project-image-full">
+
                         <div class="project-tech-overlay">
+
                             <div class="tech-tags">
+
                                 <span class="tech-tag">Laravel</span>
+
                                 <span class="tech-tag">Tailwind CSS</span>
+
                                 <span class="tech-tag">Flowbite</span>
+
                                 <span class="tech-tag">MySQL</span>
+
                             </div>
+
                         </div>
+
                     </div>
+
                     <div class="project-content-full">
+
                         <h3>Paombong Rural Health Inventory System (PRHISMS)</h3>
+
                         <p class="project-description">
+
                             Built a comprehensive medical storage and delivery tracking system using Laravel, Tailwind CSS, and Flowbite. 
+
                             Implemented real-time notifications for inventory updates and delivery status, designed a mobile-responsive 
-                            interface and converted the app into a Progressive Web App (PWA) for offline access and better mobile performance.
+
+                            interface and converted the app into a Progressive Web App (PWA) for better mobile performance.
+
                         </p>
+
                         <div class="project-features">
+
                             <h4>Key Features:</h4>
+
                             <ul>
+
                                 <li>Real-time inventory tracking and management</li>
+
                                 <li>Delivery status notifications</li>
+
                                 <li>Progressive Web App (PWA) functionality</li>
+
                                 <li>Mobile-responsive design</li>
-                                <li>Offline access capabilities</li>
+
                             </ul>
+
                         </div>
+
                         <div class="project-links">
-                            <a href="#" class="project-btn primary">Live Demo</a>
-                            <a href="#" class="project-btn secondary">GitHub</a>
+
+                            <a href="#" class="project-btn primary" data-modal="modal-prhisms">View Details</a>
+
+                            <a href="https://prhism.com" class="project-btn secondary">Live Demo</a>
+
                         </div>
+
                     </div>
+
                 </div>
+
+
 
                 <!-- GameView Project -->
+
                 <div class="project-card-full">
+
                     <div class="project-image-full gameview-bg">
+
                         <div class="project-tech-overlay">
+
                             <div class="tech-tags">
+
                                 <span class="tech-tag">Angular</span>
+
                                 <span class="tech-tag">Spring Boot</span>
+
                                 <span class="tech-tag">PostgreSQL</span>
+
                                 <span class="tech-tag">API Integration</span>
+
                             </div>
+
                         </div>
+
                     </div>
+
                     <div class="project-content-full">
+
                         <h3>GameView</h3>
+
                         <p class="project-description">
+
                             Developed a full-stack web application using Angular and Spring Boot to search games, write reviews, and manage 
+
                             game lists. Integrated with a public game API to fetch real-time data and implemented user interaction features 
+
                             like marking favorites and submitting reviews.
+
                         </p>
+
                         <div class="project-features">
+
                             <h4>Key Features:</h4>
+
                             <ul>
+
                                 <li>Game search with real-time API data</li>
+
                                 <li>User review and rating system</li>
+
                                 <li>Personal game lists (Favorites, Played, Next to Play)</li>
+
                                 <li>Interactive user interface with Angular</li>
+
                                 <li>RESTful API backend with Spring Boot</li>
+
                             </ul>
+
                         </div>
+
                         <div class="project-links">
-                            <a href="#" class="project-btn primary">Live Demo</a>
-                            <a href="#" class="project-btn secondary">GitHub</a>
+
+                            <a href="#" class="project-btn primary" data-modal="modal-gameview">View Detail</a>
+
+                            <a href="https://github.com/J3richoDev/game-view" class="project-btn secondary">GitHub</a>
+
+                            <a href="https://game-view.vercel.app" class="project-btn secondary">Live Demo</a>
+
                         </div>
+
                     </div>
+
                 </div>
+
+
 
                 <!-- AI Email Reply Extension -->
+
                 <div class="project-card-full">
+
                     <div class="project-image-full extension-bg">
+
                         <div class="project-tech-overlay">
+
                             <div class="tech-tags">
+
                                 <span class="tech-tag">Chrome Extension</span>
+
                                 <span class="tech-tag">JavaScript</span>
+
                                 <span class="tech-tag">Spring Boot</span>
+
                                 <span class="tech-tag">Docker</span>
+
                                 <span class="tech-tag">Vercel</span>
+
                             </div>
+
                         </div>
+
                     </div>
+
                     <div class="project-content-full">
+
                         <h3>AI Email Reply Chrome Extension</h3>
+
                         <p class="project-description">
+
                             Created a Chrome extension that generates AI-based email replies, improving response efficiency for users. 
+
                             Built the backend with Spring Boot, deployed using Docker and Vercel for seamless integration and scalability.
+
                         </p>
+
                         <div class="project-features">
+
                             <h4>Key Features:</h4>
+
                             <ul>
+
                                 <li>AI-powered email reply generation</li>
+
                                 <li>Chrome browser integration</li>
+
                                 <li>Response efficiency improvement</li>
+
                                 <li>Scalable backend architecture</li>
+
                                 <li>Cloud deployment with Docker and Vercel</li>
+
                             </ul>
+
                         </div>
+
                         <div class="project-links">
-                            <a href="#" class="project-btn primary">Chrome Store</a>
-                            <a href="#" class="project-btn secondary">GitHub</a>
+
+                            <a href="#" class="project-btn primary" data-modal="modal-ai-ext">View Detail</a>
+
+                            <a href="https://github.com/J3richoDev/ai-email-reply" class="project-btn secondary">GitHub</a>
+
                         </div>
+
                     </div>
+
                 </div>
+
+
 
                 <!-- Mobile Integration App -->
+
                 <div class="project-card-full">
+
                     <div class="project-image-full mobile-bg">
+
                         <div class="project-tech-overlay">
+
                             <div class="tech-tags">
+
                                 <span class="tech-tag">Mobile Development</span>
+
                                 <span class="tech-tag">Workflow Optimization</span>
-                                <span class="tech-tag">Integration</span>
+
+                                <span class="tech-tag">Numerical Integration</span>
+
                             </div>
+
                         </div>
+
                     </div>
+
                     <div class="project-content-full">
-                        <h3>Mobile Integration App</h3>
+
+                        <h3>Mobile Numerical Integration App</h3>
+
                         <p class="project-description">
+
                             Developed a mobile integration app for a professor, streamlining classroom tasks and improving workflow 
+
                             efficiency by 30%. The application focuses on task automation and seamless integration with existing 
+
                             classroom management systems.
+
                         </p>
+
                         <div class="project-features">
+
                             <h4>Key Features:</h4>
+
                             <ul>
+
                                 <li>Classroom task automation</li>
+
                                 <li>30% workflow efficiency improvement</li>
+
                                 <li>Mobile-first design approach</li>
+
                                 <li>Integration with existing systems</li>
+
                                 <li>User-friendly interface for educators</li>
+
                             </ul>
+
                         </div>
+
                         <div class="project-links">
-                            <a href="#" class="project-btn primary">Case Study</a>
-                            <a href="#" class="project-btn secondary">GitHub</a>
+
+                            <a href="#" class="project-btn primary" data-modal="modal-mobile-app">View Detail</a>
+
+                            <a href="https://github.com/J3richoDev/Numerical-Integration-Calculator" class="project-btn secondary">GitHub</a>
+
                         </div>
+
                     </div>
+
                 </div>
+
+
 
                 <!-- Clinic Queue System -->
+
                 <div class="project-card-full">
+
                     <div class="project-image-full clinic-bg">
+
                         <div class="project-tech-overlay">
+
                             <div class="tech-tags">
+
                                 <span class="tech-tag">Queue Management</span>
+
                                 <span class="tech-tag">Healthcare</span>
+
                                 <span class="tech-tag">Staff Coordination</span>
+
                             </div>
+
                         </div>
+
                     </div>
+
                     <div class="project-content-full">
+
                         <h3>Clinic Queue System</h3>
+
                         <p class="project-description">
+
                             Built a queuing system for a local clinic to manage patient flow, reducing wait times and improving staff 
+
                             coordination. The system provides real-time queue status and helps optimize clinic operations.
+
                         </p>
+
                         <div class="project-features">
+
                             <h4>Key Features:</h4>
+
                             <ul>
+
                                 <li>Real-time patient queue management</li>
+
                                 <li>Reduced wait times for patients</li>
+
                                 <li>Improved staff coordination</li>
+
                                 <li>Patient flow optimization</li>
+
                                 <li>Easy-to-use interface for clinic staff</li>
+
                             </ul>
+
                         </div>
+
                         <div class="project-links">
-                            <a href="#" class="project-btn primary">Live Demo</a>
-                            <a href="#" class="project-btn secondary">GitHub</a>
+
+                            <a href="#" class="project-btn primary" data-modal="modal-clinic">View Detail</a>
+
+                            <a href="https://github.com/J3richoDev/Clinic-Management" class="project-btn secondary">GitHub</a>
+
                         </div>
+
                     </div>
+
                 </div>
+
             </div>
+
         </div>
+
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Interested in Working Together?</h2>
-                <p>Let's discuss your next project and bring your ideas to life</p>
-                <a href="contact.html" class="btn-primary">Get In Touch</a>
-            </div>
-        </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Jericho Nomat</h3>
-                    <p>Full Stack Web Developer passionate about creating exceptional digital experiences.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="projects.html">Projects</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Connect</h4>
-                    <div class="footer-social">
-                        <a href="https://github.com/JerichoDev" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://linkedin.com/in/jericho-nomat" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="mailto:nomat.dev@gmail.com"><i class="fas fa-envelope"></i></a>
+
+    <!-- Project Modals -->
+
+    <div class="modals">
+
+        <!-- PRHISMS Modal -->
+
+        <div class="modal" id="modal-prhisms" aria-hidden="true">
+
+            <div class="modal-overlay" data-close></div>
+
+            <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-prhisms-title">
+
+                <button class="modal-close" aria-label="Close modal" data-close>&times;</button>
+
+                <div class="modal-body">
+
+                    <div class="modal-left">
+
+                        <h2 id="modal-prhisms-title">Paombong Rural Health Inventory System (PRHISMS)</h2>
+
+                        <p class="modal-desc">Built a comprehensive medical storage and delivery tracking system using Laravel, Tailwind CSS, and Flowbite. Implemented real-time notifications for inventory updates and delivery status, designed a mobile-responsive interface and converted the app into a Progressive Web App (PWA) for better mobile performance.</p>
+
+                        <div class="modal-info">
+
+                            <p><strong>Role:</strong> Full Stack Developer</p>
+
+                            <p><strong>Tech:</strong> Laravel, Tailwind CSS, Flowbite, MySQL</p>
+
+                            <p><strong>Highlights:</strong> Real-time inventory, PWA</p>
+
+                        </div>
+
+                        <div class="modal-cta">
+
+                            <a href="https://prhism.com" class="project-btn primary" target="_blank">Visit Live</a>
+
+                            <a href="#" class="project-btn secondary" data-close>Close</a>
+
+                        </div>
+
                     </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Jericho Nomat. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
 
-    <script src="js/script.js"></script>
-</body>
-</html>
+                    <div class="modal-right">
+
+                        <div class="modal-gallery">
+
+                            <img src="/images/prhisms-1.png" alt="PRHISMS screenshot 1">
+
+                            <img src="/images/prhisms-2.png" alt="PRHISMS screenshot 2">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- GameView Modal -->
+
+        <div class="modal" id="modal-gameview" aria-hidden="true">
+
+            <div class="modal-overlay" data-close></div>
+
+            <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-gameview-title">
+
+                <button class="modal-close" aria-label="Close modal" data-close>&times;</button>
+
+                <div class="modal-body">
+
+                    <div class="modal-left">
+
+                        <h2 id="modal-gameview-title">GameView</h2>
+
+                        <p class="modal-desc">Developed a full-stack web application using Angular and Spring Boot to search games, write reviews, and manage game lists. Integrated with a public game API to fetch real-time data and implemented user interaction features like marking favorites and submitting reviews.</p>
+
+                        <div class="modal-info">
+
+                            <p><strong>Role:</strong> Frontend & Backend</p>
+
+                            <p><strong>Tech:</strong> Angular, Spring Boot, PostgreSQL</p>
+
+                            <p><strong>Highlights:</strong> API integration, User reviews, Personal lists</p>
+
+                        </div>
+
+                        <div class="modal-cta">
+
+                            <a href="https://game-view.vercel.app" class="project-btn primary" target="_blank">Open App</a>
+
+                            <a href="#" class="project-btn secondary" data-close>Close</a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="modal-right">
+
+                        <div class="modal-gallery">
+
+                            <img src="/images/gameview-1.png" alt="GameView screenshot 1">
+
+                            <img src="/images/gameview-2.png" alt="GameView screenshot 2">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- AI Email Extension Modal -->
+
+        <div class="modal" id="modal-ai-ext" aria-hidden="true">
+
+            <div class="modal-overlay" data-close></div>
+
+            <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-ai-ext-title">
+
+                <button class="modal-close" aria-label="Close modal" data-close>&times;</button>
+
+                <div class="modal-body">
+
+                    <div class="modal-left">
+
+                        <h2 id="modal-ai-ext-title">AI Email Reply Chrome Extension</h2>
+
+                        <p class="modal-desc">Created a Chrome extension that generates AI-based email replies, improving response efficiency for users. Built the backend with Spring Boot, deployed using Docker and Vercel for seamless integration and scalability.</p>
+
+                        <div class="modal-info">
+
+                            <p><strong>Role:</strong> Full Stack</p>
+
+                            <p><strong>Tech:</strong> Chrome Extension, JavaScript, Spring Boot, Docker</p>
+
+                            <p><strong>Highlights:</strong> AI-generated replies, Browser integration, Scalable backend</p>
+
+                        </div>
+
+                        <div class="modal-cta">
+
+                            <a href="https://github.com/J3richoDev/ai-email-reply" class="project-btn primary" target="_blank">View on GitHub</a>
+
+                            <a href="#" class="project-btn secondary" data-close>Close</a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="modal-right">
+
+                        <div class="modal-gallery">
+
+                            <img src="/images/ai-ext-1.png" alt="AI Extension screenshot 1">
+
+                            <img src="/images/ai-ext-2.png" alt="AI Extension screenshot 2">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Mobile App Modal -->
+
+        <div class="modal" id="modal-mobile-app" aria-hidden="true">
+
+            <div class="modal-overlay" data-close></div>
+
+            <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-mobile-app-title">
+
+                <button class="modal-close" aria-label="Close modal" data-close>&times;</button>
+
+                <div class="modal-body">
+
+                    <div class="modal-left">
+
+                        <h2 id="modal-mobile-app-title">Mobile Numerical Integration App</h2>
+
+                        <p class="modal-desc">Developed a mobile integration app for a professor, streamlining classroom tasks and improving workflow efficiency by 30%. The application focuses on task automation and seamless integration with existing classroom management systems.</p>
+
+                        <div class="modal-info">
+
+                            <p><strong>Role:</strong> Mobile Developer</p>
+
+                            <p><strong>Tech:</strong> Mobile Development, Integration</p>
+
+                            <p><strong>Highlights:</strong> Workflow automation, Mobile-first UI</p>
+
+                        </div>
+
+                        <div class="modal-cta">
+
+                            <a href="https://github.co
