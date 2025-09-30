@@ -2745,3 +2745,211 @@ body {
 .light-theme ::-webkit-scrollbar-thumb:hover {
     background: #ff8533;
 }
+
+/* Modal Styles */
+.modals {
+    position: relative;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+
+.modal[aria-hidden="false"] {
+    display: flex;
+    animation: modalShow 240ms ease both;
+}
+
+.modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    backdrop-filter: blur(4px);
+    transition: opacity 0.25s ease;
+}
+
+.modal-panel {
+    position: relative;
+    background: #ffffff; /* white card like the design */
+    color: #111827;
+    border-radius: 14px;
+    width: min(1200px, 96%);
+    max-height: 92vh;
+    overflow: auto; /* allow internal scrolling on small screens */
+    box-shadow: 0 30px 80px rgba(2,6,23,0.55);
+    border: 1px solid rgba(15,23,42,0.06);
+    z-index: 2001;
+    transform-origin: center center;
+}
+
+.modal-close {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: transparent;
+    border: 1px solid rgba(15,23,42,0.06);
+    color: #111827;
+    font-size: 22px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2002;
+}
+
+.modal-close:hover {
+    background: rgba(15,23,42,0.03);
+    transform: scale(1.02);
+}
+
+.modal-close:focus {
+    outline: 3px solid rgba(59,130,246,0.25);
+    outline-offset: 2px;
+}
+
+/* scrollbar for the modal panel when content overflows */
+.modal-panel::-webkit-scrollbar {
+    width: 10px;
+}
+
+.modal-panel::-webkit-scrollbar-track {
+    background: rgba(15,23,42,0.02);
+}
+
+.modal-panel::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, rgba(99,102,241,0.2), rgba(16,185,129,0.15));
+    border-radius: 10px;
+    border: 2px solid rgba(255,255,255,0.02);
+}
+
+.modal-body {
+    display: grid;
+    grid-template-columns: 420px 1fr; /* left narrow column, right large screenshot */
+    gap: 28px;
+    padding: 34px 34px 20px 34px;
+    align-items: start;
+}
+
+.modal-left {
+    color: #111827;
+    height: calc(92vh - 120px);
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.modal-left h2 {
+    margin-bottom: 12px;
+    font-size: 1.5rem;
+    color: #0b1220;
+}
+
+.modal-desc {
+    color: #374151;
+    margin-bottom: 16px;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+.modal-info p {
+    color: #374151;
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+.modal-cta {
+    margin-top: 18px;
+    display: flex;
+    gap: 12px;
+}
+
+.modal-right {
+    display: block;
+    height: calc(92vh - 120px);
+    overflow: hidden;
+}
+
+.modal-right .modal-gallery {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column; /* stack screenshots vertically */
+    gap: 18px;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 8px 12px 12px 12px;
+    overflow-y: auto; /* vertical scrolling */
+}
+
+.modal-gallery img {
+    width: 100%;
+    max-width: 980px; /* keep image contained nicely */
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    display: block;
+    box-shadow: 0 10px 30px rgba(2,6,23,0.12);
+    border: 1px solid rgba(2,6,23,0.04);
+    background: #0f1724;
+}
+
+/* scrollbar for modal-right gallery */
+.modal-right .modal-gallery::-webkit-scrollbar {
+    width: 10px;
+}
+.modal-right .modal-gallery::-webkit-scrollbar-track {
+    background: rgba(15,23,42,0.02);
+    border-radius: 10px;
+}
+.modal-right .modal-gallery::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, rgba(99,102,241,0.18), rgba(16,185,129,0.12));
+    border-radius: 10px;
+}
+
+/* custom scrollbar for modal-left */
+.modal-left::-webkit-scrollbar {
+    width: 10px;
+}
+
+.modal-left::-webkit-scrollbar-track {
+    background: #f3f4f6;
+    border-radius: 10px;
+}
+
+.modal-left::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #d1d5db, #9ca3af);
+    border-radius: 10px;
+    border: 2px solid #f8fafc;
+}
+
+/* Responsive modal layout */
+@media (max-width: 1024px) {
+    .modal-body { grid-template-columns: 360px 1fr; padding: 28px; }
+    .modal-gallery img { width: 100%; }
+}
+
+@media (max-width: 800px) {
+    .modal-body { grid-template-columns: 1fr; padding: 20px; }
+    .modal-left { height: auto; max-height: none; }
+    .modal-right { margin-top: 8px; }
+    .modal-gallery img { width: 100%; max-height: 60vh; }
+}
+
+@keyframes modalShow {
+    from { opacity: 0; transform: scale(0.98); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* ensure modal content colors in dark/light themes */
+.light-theme .modal-overlay { background: rgba(0,0,0,0.35); }
+.light-theme .modal-panel { background: #fbfdff; color: #0b1220; border-color: rgba(2,6,23,0.04); }
+.light-theme .modal-close { background: #ffffff; border-color: rgba(2,6,23,0.06); color: #0b1220; }
+.light-theme .modal-left::-webkit-scrollbar-track { background: #ffffff; }
+.light-theme .modal-left::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #e5e7eb, #d1d5db); }
