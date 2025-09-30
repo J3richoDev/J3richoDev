@@ -260,13 +260,15 @@ function setupContactForm() {
         
         // Show loading state
         submitBtn.classList.add('loading');
-        
-        // Simulate form submission (replace with actual endpoint)
+        hideGlobalError();
+
+        // Submit to configured endpoint
         try {
-            await simulateFormSubmission();
+            await submitFormData(new FormData(form));
             showFormSuccess();
         } catch (error) {
-            showFormError('Failed to send message. Please try again.');
+            console.error('Form submission error:', error);
+            showFormError('Failed to send message. Please try again later.');
         } finally {
             submitBtn.classList.remove('loading');
         }
@@ -315,10 +317,42 @@ function setupContactForm() {
         errorElement.style.display = 'none';
     }
 
-    function simulateFormSubmission() {
-        return new Promise(resolve => {
-            setTimeout(resolve, 2000); // Simulate network delay
+    async function submitFormData(formData) {
+        const endpoint = form.getAttribute('data-endpoint');
+
+        if (!endpoint || endpoint.includes('yourFormId')) {
+            throw new Error('Form endpoint not configured. Set data-endpoint on the form with your Formspree URL.');
+        }
+
+        // Convert FormData to JSON object
+        const data = {};
+        formData.forEach((value, key) => {
+            data[key] = value;
         });
+
+        const res = await fetch(endpoint, {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        });
+
+        if (!res.ok) {
+            // Try to parse JSON error from endpoint
+            let errorMsg = `Server responded with ${res.status}`;
+            try {
+                const body = await res.json();
+                if (body && body.error) errorMsg = body.error;
+            } catch (e) {
+                // ignore json parse errors
+            }
+            throw new Error(errorMsg);
+        }
+
+        // Formspree returns 200/201 and a JSON body on success
+        return await res.json();
     }
 
     function showFormSuccess() {
@@ -334,7 +368,21 @@ function setupContactForm() {
     }
 
     function showFormError(message) {
-        alert(message); // Replace with better error handling
+        const globalError = $('#formError');
+        if (globalError) {
+            globalError.textContent = message;
+            globalError.style.display = 'block';
+        } else {
+            alert(message);
+        }
+    }
+
+    function hideGlobalError() {
+        const globalError = $('#formError');
+        if (globalError) {
+            globalError.textContent = '';
+            globalError.style.display = 'none';
+        }
     }
 
     // Real-time validation
@@ -735,6 +783,82 @@ function setupThemeToggle() {
         });
     }
 }
+
+// Modal functionality: open/close, focus trap, ESC to close
+function setupModals() {
+    const modalTriggers = document.querySelectorAll('[data-modal]');
+    const modals = document.querySelectorAll('.modal');
+
+    function openModal(modal) {
+        if (!modal) return;
+        modal.setAttribute('aria-hidden', 'false');
+        // save last focused element
+        modal._lastFocus = document.activeElement;
+        // focus first focusable element inside modal
+        const focusable = modal.querySelectorAll('a, button, input, textarea, [tabindex]:not([tabindex="-1"])');
+        if (focusable.length) focusable[0].focus();
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal(modal) {
+        if (!modal) return;
+        modal.setAttribute('aria-hidden', 'true');
+        // restore focus
+        if (modal._lastFocus) modal._lastFocus.focus();
+        document.body.style.overflow = '';
+    }
+
+    modalTriggers.forEach(trigger => {
+        const modalId = trigger.getAttribute('data-modal');
+        trigger.addEventListener('click', (e) => {
+            e.preventDefault();
+            const modal = document.getElementById(modalId);
+            openModal(modal);
+        });
+    });
+
+    // Close buttons and overlay
+    document.addEventListener('click', (e) => {
+        const close = e.target.closest('[data-close]');
+        if (close) {
+            const modal = close.closest('.modal');
+            closeModal(modal);
+        }
+    });
+
+    // ESC to close
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' || e.key === 'Esc') {
+            modals.forEach(m => {
+                if (m.getAttribute('aria-hidden') === 'false') closeModal(m);
+            });
+        }
+        // simple focus trap
+        if (e.key === 'Tab') {
+            modals.forEach(m => {
+                if (m.getAttribute('aria-hidden') === 'false') {
+                    const focusable = Array.from(m.querySelectorAll('a, button, input, textarea, [tabindex]:not([tabindex="-1"])'))
+                        .filter(el => !el.hasAttribute('disabled'));
+                    if (!focusable.length) return;
+                    const first = focusable[0];
+                    const last = focusable[focusable.length - 1];
+                    if (e.shiftKey && document.activeElement === first) {
+                        e.preventDefault();
+                        last.focus();
+                    } else if (!e.shiftKey && document.activeElement === last) {
+                        e.preventDefault();
+                        first.focus();
+                    }
+                }
+            });
+        }
+    });
+}
+
+// Initialize modals after DOM content
+document.addEventListener('DOMContentLoaded', () => {
+    setupModals();
+});
 
 // Initialize all animations and interactions
 console.log('Portfolio JavaScript loaded successfully! 🚀');
