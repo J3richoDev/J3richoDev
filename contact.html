@@ -50,8 +50,7 @@
                     <div class="form-container">
                         <h2>Send me a message</h2>
                         <p>I'd love to hear from you. Fill out the form below and I'll get back to you as soon as possible.</p>
-                        
-                        <form id="contactForm" class="contact-form">
+                        <form id="contactForm" class="contact-form" method="POST" data-endpoint="https://formspree.io/f/xrbyqlwl">
                             <div class="form-group">
                                 <label for="name">Full Name *</label>
                                 <input type="text" id="name" name="name" required>
@@ -84,6 +83,8 @@
                                 </span>
                             </button>
                         </form>
+
+                        <div class="form-error-global" id="formError" style="display:none; color:#d9534f; margin-top:12px;"></div>
                         
                         <div class="form-success" id="formSuccess">
                             <i class="fas fa-check-circle"></i>
@@ -134,11 +135,11 @@
                         <div class="social-connect">
                             <h4>Follow Me</h4>
                             <div class="social-links-contact">
-                                <a href="https://github.com/JerichoDev" class="social-link-contact" target="_blank">
+                                <a href="https://github.com/J3richoDev" class="social-link-contact" target="_blank">
                                     <i class="fab fa-github"></i>
                                     <span>GitHub</span>
                                 </a>
-                                <a href="https://linkedin.com/in/jericho-nomat" class="social-link-contact" target="_blank">
+                                <a href="https://linkedin.com/in/jericho-nomat-7a0a85187" class="social-link-contact" target="_blank">
                                     <i class="fab fa-linkedin"></i>
                                     <span>LinkedIn</span>
                                 </a>
@@ -230,8 +231,8 @@
                 <div class="footer-section">
                     <h4>Connect</h4>
                     <div class="footer-social">
-                        <a href="https://github.com/JerichoDev" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://linkedin.com/in/jericho-nomat" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/J3richoDev" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com/in/jericho-nomat-7a0a85187" target="_blank"><i class="fab fa-linkedin"></i></a>
                         <a href="mailto:nomat.dev@gmail.com"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
